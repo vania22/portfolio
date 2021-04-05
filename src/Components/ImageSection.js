@@ -38,6 +38,7 @@ function ImageSection() {
                 <a
                     href='https://drive.google.com/file/d/1aBAtYuqjaa063cA_opeXBkV9NSV1_ayv/view?usp=sharing'
                     target='_blank'
+                    rel='noreferrer'
                 >
                     <button className='btn'>Download Cv</button>
                 </a>

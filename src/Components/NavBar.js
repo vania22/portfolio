@@ -2,10 +2,14 @@ import React from 'react';
 import avatar from '../img/avatar.png';
 import { NavLink } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ setNavToggle }) {
     return (
         <div className='NavBar'>
             <nav className='nav'>
+                <span className='close-button' onClick={() => setNavToggle(false)}>
+                    <span className='close-button-line'></span>
+                    <span className='close-button-line'></span>
+                </span>
                 <div className='profile'>
                     <img src={avatar} alt='' />
                 </div>

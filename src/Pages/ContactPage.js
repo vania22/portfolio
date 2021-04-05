@@ -22,6 +22,7 @@ function ContactPage() {
                         allowFullScreen=''
                         aria-hidden='false'
                         tabIndex='0'
+                        title='home'
                     ></iframe>
                 </div>
                 <div className='contact-sect'>
