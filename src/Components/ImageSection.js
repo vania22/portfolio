@@ -24,15 +24,13 @@ function ImageSection() {
                         <p>Nationality</p>
                         <p>Languages</p>
                         <p>Address</p>
-                        <p>Countries</p>
                     </div>
                     <div className='right-section'>
                         <p>: Ivan Krupskyi</p>
                         <p>: 22</p>
                         <p>: Ukrainian</p>
-                        <p>: English, Ukrainian, Russian</p>
+                        <p>: English, Ukrainian</p>
                         <p>: 36 Dunelm Grove, Norwood, London, UK. SE27 9JZ</p>
-                        <p>: United Kingdom, Ukraine</p>
                     </div>
                 </div>
                 <a
