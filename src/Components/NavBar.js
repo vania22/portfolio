@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import avatar from '../img/avatar.png';
 import { NavLink } from 'react-router-dom';
 
-function Navbar({ setNavToggle }) {
+function Navbar({ menuVisible, setNavToggle }) {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const closeOnOutterClick = (e) => {
+            if (!ref.current.contains(e.target) && menuVisible) {
+                setNavToggle(false);
+            }
+        };
+
+        document.addEventListener('click', closeOnOutterClick);
+
+        return () => document.removeEventListener('click', closeOnOutterClick);
+    }, [menuVisible]);
+
     return (
-        <div className='NavBar'>
+        <div className='NavBar' ref={ref}>
             <nav className='nav'>
                 <span className='close-button' onClick={() => setNavToggle(false)}>
                     <span className='close-button-line'></span>
@@ -14,7 +28,7 @@ function Navbar({ setNavToggle }) {
                     <img src={avatar} alt='' />
                 </div>
 
-                <ul className='nav-items'>
+                <ul className='nav-items' onClick={() => setNavToggle(false)}>
                     <li className='nav-item'>
                         <NavLink to='/' exact activeClassName='active'>
                             Home
